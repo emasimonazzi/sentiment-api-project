@@ -18,7 +18,7 @@ pipeline {
         // Test: esegue unit test e test di integrazione 
         stage('Test') {
             steps {
-                sh 'docker run --rm sentiment-api pytest -v'
+                sh 'docker run --rm sentiment-api python -m pytest -v'
             }
         }
 
